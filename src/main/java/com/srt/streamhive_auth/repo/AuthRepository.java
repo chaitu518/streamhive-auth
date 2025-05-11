@@ -4,4 +4,5 @@ import com.srt.streamhive_auth.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface AuthRepository extends JpaRepository<User, Long> {
+    public User findByEmail(String email);
 }

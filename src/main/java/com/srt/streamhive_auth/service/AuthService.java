@@ -23,4 +23,15 @@ public class AuthService {
         }
 
     }
+
+    public String loginUser(String email, String password) {
+        User loginUser = authRepository.findByEmail(email);
+        if (loginUser == null) {
+            return "User could not be found";
+        }
+        if (loginUser.getPassword().equals(password)) {
+            return "User logged in successfully";
+        }
+        return "User could not be logged in";
+    }
 }
