@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  auth-service:
+    build: .
+    container_name: auth-service
+    env_file:
+      - .env
+    ports:
+      - "8080:8080"
+    networks:
+      - streamhive-net
+
+networks:
+  streamhive-net:
+    driver: bridge
