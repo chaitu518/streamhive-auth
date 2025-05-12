@@ -6,7 +6,7 @@ import com.srt.streamhive_auth.service.AuthService;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/v1/users")
+@RequestMapping("/v1/auth/users")
 public class AuthController {
     private AuthService authService;
     public AuthController(AuthService authService) {
